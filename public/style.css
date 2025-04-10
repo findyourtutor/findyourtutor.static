@@ -3,7 +3,7 @@
     --color-primary: #023047;
     --color-text: #7A7A7A;
     --color-accent: #EB7547;
-  
+
     /* Custom Colors */
     --color-text2: #303336;
     --color-saffron: #E9C46A;
@@ -21,42 +21,126 @@
     --color-prussian-blue-2: #125C81;
     --color-sea-green-2: #03BB62;
     --color-burnt-sienna-2: #DD5019;
-  
-  }
+
+}
 
 /* Background colors */
-.bg-primary { background-color: var(--color-primary); }
-.bg-accent { background-color: var(--color-accent); }
-.bg-saffron { background-color: var(--color-saffron); }
-.bg-sandy-brown { background-color: var(--color-sandy-brown); }
-.bg-white-custom { background-color: var(--color-white); }
-.bg-black-custom { background-color: var(--color-black); }
-.bg-dark-bg { background-color: var(--color-prussian-blue-dark-bg); }
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-saffron {
+    background-color: var(--color-saffron);
+}
+
+.bg-sandy-brown {
+    background-color: var(--color-sandy-brown);
+}
+
+.bg-white-custom {
+    background-color: var(--color-white);
+}
+
+.bg-black-custom {
+    background-color: var(--color-black);
+}
+
+.bg-dark-bg {
+    background-color: var(--color-prussian-blue-dark-bg);
+}
+
+.bg-light-bg{
+      background-color: var(--color-prussian-blue-light-bg);
+}
 
 /* Text colors */
-.text-primary { color: var(--color-primary); }
-.text-accent { color: var(--color-accent); }
-.text-saffron { color: var(--color-saffron); }
-.text-text2 { color: var(--color-text2); }
-.text-white-custom { color: var(--color-white); }
-.text-black-custom { color: var(--color-black); }
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-saffron {
+    color: var(--color-saffron);
+}
+
+.text-text {
+    color: var(--color-text);
+}
+
+.text-white-custom {
+    color: var(--color-white);
+}
+
+.text-black-custom {
+    color: var(--color-black);
+}
+.text-sea-green{
+    color: var(--color-sea-green-2);
+}
 
 /* Border colors */
-.border-primary { border-color: var(--color-primary); }
-.border-accent { border-color: var(--color-accent); }
+.border-primary {
+    border-color: var(--color-primary);
+}
 
-.display1{
-        font-family: "Poppins", Sans-serif;
+.border-accent {
+    border-color: var(--color-accent);
+}
+
+.display1 {
+    font-size: 1.875rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+
+.med-para {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/* Media queries */
+
+@media (min-width: 640px) {
+    .display1 {
+        font-size: 3rem;
+        /* text-4xl */
+    }
+
+    .med-para {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .med-para {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .med-para {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1152px) {
+    .display1 {
         font-size: 64px;
-        font-weight: 600;
-        line-height: 61px;
-}
+        /* text-6xl */
+    }
 
-.med-para{
-        font-family: "Poppins", Sans-serif;
+    .med-para {
         font-size: 22px;
-        font-weight: 400;
-        line-height: 24px;
+    }
 }
-
-  
