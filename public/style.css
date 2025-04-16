@@ -62,7 +62,7 @@
     background-color: var(--color-prussian-blue-light-bg);
 }
 
-.bg-lightblue{
+.bg-lightblue {
     background-color: var(--color-lightblue);
 }
 
@@ -124,8 +124,8 @@
 
 .first-slider .owl-dot {
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     background: #ccc !important;
     border-radius: 50%;
     margin: 0 5px;
@@ -133,8 +133,75 @@
 }
 
 .first-slider .owl-dot.active {
-    background: var(--color-prussian-blue-2) !important;
+    background: #007AFF !important;
 }
+
+.owl-carousel.third-slider .owl-item>div {
+    /* Assuming your content is directly inside a div within .owl-item */
+    direction: ltr;
+    text-align: left;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.slidingVertical {
+    display: inline;
+    text-indent: 20px;
+}
+
+@keyframes bottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    5% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    45% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slidingVertical span {
+    animation: bottomToTop 6.5s linear infinite 0s;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.slidingVertical span:nth-child(2) {
+    animation-delay: 2.166s;
+}
+
+.slidingVertical span:nth-child(3) {
+    animation-delay: 4.333s;
+}
+
+
+
+
+
+
 
 
 

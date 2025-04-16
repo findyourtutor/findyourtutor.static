@@ -68,7 +68,8 @@ $(document).ready(function() {
     autoplayHoverPause: true,
     smartSpeed: 100, 
     autoplaySpeed: 5000, 
-    slideTransition: 'linear',
+    slideTransition: 'linear',  
+    rtl: true,
     responsive: {
       0: {
         items: 1,
@@ -86,3 +87,8 @@ $(document).ready(function() {
       }
     } 
   });
+
+  
+
+  
+  
