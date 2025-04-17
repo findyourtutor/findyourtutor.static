@@ -137,7 +137,6 @@
 }
 
 .owl-carousel.third-slider .owl-item>div {
-    /* Assuming your content is directly inside a div within .owl-item */
     direction: ltr;
     text-align: left;
 }
@@ -183,7 +182,7 @@
 }
 
 .slidingVertical span {
-    animation: bottomToTop 6.5s linear infinite 0s;
+    animation: bottomToTop 6.5s ease infinite 0s;
     opacity: 0;
     overflow: hidden;
     position: absolute;
@@ -197,13 +196,50 @@
     animation-delay: 4.333s;
 }
 
+.card__inner {
+    display: flex;
+  }
 
+.cards {
+    grid-template-rows: repeat(var(--cards-count), var(--card-height));
+    gap: 30px 0;
+}
 
+/* .space {
+    height: 90vh;
+}
 
+.space--small {
+    height: 40vh;
+} */
 
+.bg-cardSection{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, var(--color-primary) 0%, #041C29 14%);
+}
 
+.left-bg{
+    width: 822px;
+    transform: rotate(31.534deg);
+    flex-shrink: 0;
+    border-radius: 300px;
+    opacity: 0.6;
+    background: #EB7547;
+    filter: blur(150px);
+}
 
-
+.right-bg{
+    width: 50vw;
+    height: 50vw;
+    flex-shrink: 0;
+    border-radius: 300px;
+    opacity: 0.6;
+    background: #40916C;
+    filter: blur(80px);
+    z-index: 0;
+    position: absolute;
+    left: 41vw;
+}
 
 /* Media queries */
 
