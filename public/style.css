@@ -213,6 +213,13 @@
     height: 40vh;
 } */
 
+.heading-box {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: sticky;
+    top: -38px;
+}
+
 .bg-cardSection{
     background-color: transparent;
     background-image: linear-gradient(180deg, var(--color-primary) 0%, #041C29 14%);
@@ -220,12 +227,32 @@
 
 .left-bg{
     width: 822px;
+    min-height: 786px;
     transform: rotate(31.534deg);
     flex-shrink: 0;
     border-radius: 300px;
     opacity: 0.6;
     background: #EB7547;
     filter: blur(150px);
+    left: -35vw;
+    top: 1000px;
+    position: absolute;
+}
+
+.card   {
+    backdrop-filter: blur(95px);
+    background-color: rgba(255, 255, 255, 0);
+    background-image: radial-gradient(circle, rgba(165, 239, 255, .19), rgba(110, 191, 244, .04) 71%, rgba(70, 144, 212, .15));
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all .5s;
+    overflow: hidden;
+    box-shadow: 0 -12px 16px -4px rgba(0, 0, 0, .05);
+    min-height: 470px;
+}
+
+.card:hover{
+        border-color: #fff;
+        background-image: radial-gradient(circle at 0%, rgba(165, 239, 255, .28), rgba(110, 191, 244, .07) 71%, rgba(70, 144, 212, .23)), radial-gradient(circle, rgba(165, 239, 255, .19), rgba(110, 191, 244, .04) 71%, rgba(70, 144, 212, .15));
 }
 
 .right-bg{
@@ -239,6 +266,7 @@
     z-index: 0;
     position: absolute;
     left: 41vw;
+    top: 2100px;
 }
 
 /* Media queries */
