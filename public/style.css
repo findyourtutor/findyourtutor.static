@@ -66,6 +66,10 @@
     background-color: var(--color-lightblue);
 }
 
+.bg-sea-green-light-bg{
+    background-color: var(--color-sea-green-light-bg);
+}
+
 /* Text colors */
 .text-primary {
     color: var(--color-primary);
@@ -288,6 +292,43 @@
     left: 41vw;
     top: 2100px;
 }
+
+/* FAQ Section */
+
+
+.accordion__header::after {
+    content: '';
+    background: url(https://www.svgrepo.com/show/357035/angle-down.svg) no-repeat center;
+    width: 20px;
+    height: 20px;
+    transition: .4s;
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.accordion__header.active::after {
+    transform: rotateX(180deg);
+}
+
+.accordion__item .accordion__content {
+    padding: 0 25px;
+    max-height: 0;
+    transition: .5s;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
