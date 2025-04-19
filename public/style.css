@@ -70,6 +70,10 @@
     background-color: var(--color-sea-green-light-bg);
 }
 
+.bg-saffron-light-bg{
+    background-color: var(--color-saffron-light-bg);
+}
+
 /* Text colors */
 .text-primary {
     color: var(--color-primary);
@@ -319,6 +323,37 @@
     transition: .5s;
     overflow: hidden;
 }
+
+/* Custom Button */
+
+.custom-button {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 13px 20px;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    transition: all .3s;
+}
+
+.custom-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    transition: all .3s;
+}
+
+.card.blue {
+    background-color: transparent;
+    background-image: radial-gradient(at bottom right, #010E15 0%, var(--color-primary) 100%);
+  }
+
+  .card{
+    min-height: 330px
+  }
+
 
 
 
