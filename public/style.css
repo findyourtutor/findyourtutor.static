@@ -23,6 +23,7 @@
     --color-burnt-sienna-2: #DD5019;
     --color-lightblue: #E6EAED;
     --color-lightbrown: #F9F2E0;
+    --color-green: #40916C;
 }
 
 /* Background colors */
@@ -66,15 +67,19 @@
     background-color: var(--color-lightblue);
 }
 
-.bg-sea-green-light-bg{
+.bg-sea-green-light-bg {
     background-color: var(--color-sea-green-light-bg);
 }
 
-.bg-saffron-light-bg{
+.bg-saffron-light-bg {
     background-color: var(--color-saffron-light-bg);
 }
 
 /* Text colors */
+.text-green {
+    color: var(--color-green);
+}
+
 .text-primary {
     color: var(--color-primary);
 }
@@ -164,20 +169,21 @@
 
 @keyframes slideLeft {
     0% {
-      transform: translateX(-70%);
+        transform: translateX(-70%);
     }
+
     100% {
-      transform: translateX(-290%);
+        transform: translateX(-290%);
     }
-  }
+}
 
 @keyframes slideRight {
     0% {
-        transform: translateX(70%);
+        transform: translateX(-200%);
     }
 
     100% {
-        transform: translateX(290%);
+        transform: translateX(70%);
     }
 }
 
@@ -345,26 +351,76 @@
     transition: all .3s;
 }
 
-.card.blue {
+.cards.blue {
     background-color: transparent;
     background-image: radial-gradient(at bottom right, #010E15 0%, var(--color-primary) 100%);
-  }
+}
 
-  .card{
-    min-height: 330px
-  }
+.cards.blue:hover {
+    background-image: radial-gradient(at top left, #031A25 50%, #023047 100%) !important;
+    transform: translateY(-15px);
+    transition: all .3s;
+}
+
+.cards.orange {
+    background-color: transparent;
+    background-image: radial-gradient(at bottom right, #DB4003 0%, var(--color-accent) 100%);
+}
+
+.cards.orange:hover {
+    background-image: radial-gradient(at top left, #DB4003 50%, #EB7547 100%) !important;
+    transform: translateY(-15px);
+    transition: all .3s;
+}
+
+.cards.green {
+    background-color: transparent;
+    background-image: radial-gradient(at bottom right, #006436 0%, var(--color-green) 100%);
+}
+
+.cards.green:hover {
+    background-image: radial-gradient(at top left, #006436 50%, #40916C 100%) !important;
+    transform: translateY(-15px);
+    transition: all .3s;
+}
 
 
+.cards {
+    min-height: 330px;
+}
 
+.subject-o:hover {
+    border-color: var(--color-accent);
+    transition: all .3s;
+}
 
+.subject-o:hover i,
+.subject-o:hover span {
+    color: var(--color-accent);
 
+}
 
+.subject-b:hover {
+    border-color: var(--color-primary);
+    transition: all .3s;
+}
 
+.subject-b:hover i,
+.subject-b:hover span {
+    color: var(--color-primary);
 
+}
 
+.subject-g:hover {
+    border-color: var(--color-green);
+    transition: all .3s;
+}
 
+.subject-g:hover i,
+.subject-g:hover span {
+    color: var(--color-green);
 
-
+}
 
 
 /* Media queries */
