@@ -27,66 +27,6 @@ $(document).ready(function () {
   });
 });
 
-// Second Slider
-// var owl = $('.second-slider');
-// owl.owlCarousel({
-//   items: 3,
-//   loop: true,
-//   margin: 50,
-//   autoplay: true,
-//   autoplayTimeout: 1000,
-//   autoplayHoverPause: true,
-//   smartSpeed: 500,
-//   autoplaySpeed: 5000,
-//   slideTransition: 'linear',
-//   responsive: {
-//     0: {
-//       items: 1,
-//       margin: 10,
-//     },
-//     800: {
-//       items: 1,
-//       margin: 5,
-//     },
-//     1000: {
-//       items: 2,
-//     },
-//     1400: {
-//       items: 3
-//     }
-//   }
-// });
-
-// // third Slider
-// var owl = $('.third-slider');
-// owl.owlCarousel({
-//   items: 3,
-//   loop: true,
-//   margin: 50,
-//   autoplay: true,
-//   autoplayTimeout: 1000,
-//   autoplayHoverPause: true,
-//   smartSpeed: 100,
-//   autoplaySpeed: 5000,
-//   slideTransition: 'linear',
-//   rtl: true,
-//   responsive: {
-//     0: {
-//       items: 1,
-//       margin: 10,
-//     },
-//     800: {
-//       items: 1,
-//       margin: 5,
-//     },
-//     1000: {
-//       items: 2,
-//     },
-//     1400: {
-//       items: 3
-//     }
-//   }
-// });
 
 
 // Faqs 
@@ -107,5 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+  const textTransition = document.querySelector('.text-transition');
+  const words = ['tutor', 'mentor', 'advisor']; 
+  const colors = ['#EE744C', '#3D906F', '#EBC273']; 
+  let currentWordIndex = 0;
+
+  function updateWord() {
+    const word = words[currentWordIndex];
+    const color = colors[currentWordIndex];
+    textTransition.innerHTML = `<span style="color: ${color}">${word}</span>`; // ✅ corrected here
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+  }
+
+  updateWord(); 
+
+  setInterval(() => {
+    textTransition.classList.remove('animate');
+    setTimeout(() => {
+      updateWord();
+      textTransition.classList.add('animate');
+    }, 90);
+  }, 3000);
+});
+
+
 
 
