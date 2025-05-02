@@ -75,6 +75,10 @@
     background-color: var(--color-saffron-light-bg);
 }
 
+.bg-sandy-brown{
+    background-color: var(--color-sandy-brown);
+}
+
 /* Text colors */
 .text-green {
     color: var(--color-green);
@@ -422,6 +426,11 @@
 .r-card{
     max-width: 342px;
     width: 100%;
+}
+
+.pricing-card:hover {
+    transform: translateY(-15px);
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
 }
 
 
