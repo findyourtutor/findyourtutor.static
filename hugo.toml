@@ -1,0 +1,14 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+[taxonomies]
+
+# Markup configuration to enable PostCSS and Tailwind
+[markup]
+  [markup.postCSS]
+    use = ["postcss"]
+    includePaths = ["assets/css"]
+
+# Optional: Environment param (used in templates if needed)
+[params]
+  env = "production"

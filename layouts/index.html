@@ -1,0 +1,888 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>{{ .Title }}</title>
+</head>
+<body>
+  <h1>Welcome to {{ .Title }}</h1>
+  <p>{{ .Content }}</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="Hugo 0.145.0">
+  <script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>findyourtutor</title>
+  <!-- Remix icon  -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- <link href="/css/output.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="{{ "css/main.css" | resources.Get | postCSS | minify | fingerprint | css.Sass }}" /> -->
+
+</head>
+
+<body>
+
+  <header class="bg-white">
+    <div class="mx-auto px-[150px] sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="/">
+            <img src="/images/logo.png" alt="FYT Logo" class="h-10 w-auto" />
+          </a>
+        </div>
+  
+        <nav class="hidden lg:flex gap-5 font-medium">
+          <a href="#" class="text-lg" >Dashboard</a>
+          <a href="#" class="text-lg" >Find a tutor</a>
+          <a href="#" class="text-lg" >Messages</a>
+          <a href="#" class="text-lg" >Bookings</a>
+          <a href="#" class="text-lg" >Resources</a>
+          <a href="#" class="text-lg" >Demo</a>
+        </nav>
+  
+        <div class="flex items-center space-x-4">
+          <a href="/login" class="custom-button bg-transparent border border-1 border-primary hover:bg-inherit hover:text-inherit">Login</a>
+          <a href="/signup" class="
+          custom-button ">
+            Sign Up
+          </a>
+        </div>
+       
+      </div>
+    </div>
+  </header>
+  
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-primary text-white px-6 pt-14">
+    <div class="max-w-6xl container mx-auto flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Left part -->
+      <div class="text-left md:text-left md:w-1/2 space-y-2">
+        <div class="wrapper">
+          <h2 class="sentence display1">
+            You deserve the best
+            <div class="text-transition">
+              <span style="color: #EE744C;">tutor</span>
+            </div>
+          </h2>
+        </div>
+        <p class="med-para tracking-wide pt-4">
+          Awaken the Genius Within: A World of One-to-one, Personalized Learning
+        </p>
+        <div class="flex flex-col lg:flex-col sm:items-start sm:gap-6 gap-3 justify-center md:justify-start pt-6">
+          <a href="#" class="bg-accent px-md-9 px-5 py-5 rounded-lg font-bold text-primary text-lg">
+            Book a trial class now!
+          </a>
+          <img src=".//images/google.png" alt="Google Review"
+            class="rounded-lg w-full sm:w-[300px] lg:w-[350px] h-auto object-contain">
+        </div>
+      </div>
+
+      <!-- Right part -->
+      <div class="relative md:w-1/2 flex justify-center items-center">
+        <div class="svg-background">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="463" height="355" viewBox="0 0 463 355" fill="none">
+            <path
+              d="M408.011 240.483C405.099 238.522 401.992 236.938 398.76 235.767C395.435 234.514 392.015 233.632 388.558 233.136C381.426 232.105 374.25 232.386 367.343 233.966C363.825 234.774 360.369 235.813 356.993 237.078C353.594 238.4 350.264 239.966 346.977 241.669C343.687 243.367 340.469 245.285 337.279 247.286C335.68 248.276 334.108 249.34 332.52 250.372L327.834 253.658C321.278 258.381 314.515 263.399 308.35 268.459C302.116 273.61 296.273 279.287 290.222 285.15C286.1 289.214 281.771 293.035 277.254 296.599C272.498 300.215 267.385 303.286 261.993 305.764C256.637 308.175 251.081 310.101 245.382 311.526L241.156 312.458L239.042 312.922C238.674 312.999 238.37 313.077 237.947 313.139L236.592 313.303C234.852 313.504 233.094 313.566 231.331 313.49C229.678 313.341 227.987 313.241 226.406 312.926C220.183 311.797 214.098 309.705 208.345 306.717C202.355 303.778 196.858 299.721 192.125 294.746L190.3 292.543C189.705 291.776 189.15 290.977 188.636 290.148C188.38 289.749 188.079 289.304 187.864 288.939L187.251 287.872L186.028 285.736C185.235 284.285 184.523 282.734 183.775 281.232C183.113 279.7 182.469 278.163 181.841 276.62C179.549 270.519 177.809 264.226 176.646 257.83C174.526 245.448 173.761 232.923 174.366 220.512C174.896 208.348 176.235 196.288 178.372 184.422C182.641 160.923 188.994 138.029 197.349 116.043C198.624 112.673 199.909 109.282 201.276 105.981L203.314 101.025L205.065 96.374C207.377 90.2255 209.102 83.8139 210.214 77.2324C211.316 70.9015 211.565 64.3859 210.955 57.879C210.434 51.6797 208.744 45.5886 205.987 39.9757C200.613 28.8993 189.926 21.308 177.966 18.4217C171.843 16.972 165.596 16.5776 159.466 17.2538C153.172 17.9024 147.004 19.3093 141.08 21.4482C139.6 22.0288 138.069 22.4649 136.628 23.1645L132.259 25.1281C129.423 26.634 126.567 28.0397 123.778 29.8291C120.971 31.4865 118.175 33.3415 115.373 35.114C112.595 36.9308 109.698 38.5993 107.106 40.6523L99.1463 46.5818C96.5805 48.6817 94.0881 50.8847 91.5533 53.0285C90.3043 54.1241 88.9975 55.1472 87.7951 56.3012L84.2137 59.7947L80.6304 63.2854C79.4305 64.4429 78.2259 65.5954 77.1328 66.8718L70.395 74.3296C69.2378 75.5388 68.2269 76.8927 67.1729 78.2039L64.0278 82.1538L60.8811 86.102C59.8673 87.4494 58.9289 88.8629 57.9485 90.2394C56.0251 93.0238 54.0252 95.748 52.1606 98.5783C35.858 123.803 23.9746 152.133 17.0483 182.288C15.0806 190.047 13.997 196.587 12.5665 201.864L12.0546 203.792L11.6544 205.633C11.3854 206.824 11.1124 207.944 10.8351 208.995C10.2818 211.098 9.71441 212.93 9.14068 214.517C7.46869 219.139 6.12819 219.025 5.3495 214.685C4.87437 211.503 4.63549 208.299 4.63515 205.104C4.63217 204.06 4.57234 202.942 4.64664 201.788C4.72779 200.635 4.81318 199.423 4.9028 198.153C5.10353 195.615 5.36616 192.856 5.69071 189.876C7.83357 174.257 11.5848 159.031 16.8774 144.471C29.1189 111.314 47.607 81.4964 71.246 56.7843C83.0946 44.555 96.1863 33.7678 110.304 24.6015L115.559 21.1508L120.938 17.7889C122.792 16.7324 124.693 15.7247 126.572 14.6912C128.479 13.7064 130.452 12.844 132.392 11.9164C140.317 8.30107 148.719 5.86671 157.374 4.67841C159.805 4.43818 162.235 4.08501 164.737 4.08715C165.984 4.06999 167.225 3.9684 168.485 4.02709L172.276 4.21311C177.431 4.50758 182.567 5.47885 187.569 7.105C188.845 7.48718 190.102 7.95249 191.334 8.4982C192.592 8.97616 193.828 9.52989 195.035 10.1566L198.648 12.0896L202.102 14.3807C206.599 17.5867 210.612 21.5354 213.979 26.0679C219.124 33.2491 222.706 41.5174 224.443 50.2236C226.05 58.5923 226.337 67.1131 225.292 75.4267L224.951 78.4855C224.797 79.4905 224.602 80.4801 224.429 81.4781C224.048 83.4586 223.781 85.4907 223.252 87.4058C222.77 89.3414 222.315 91.2915 221.806 93.2128L220.055 98.8638C219.518 100.77 218.74 102.56 218.084 104.41C217.399 106.232 216.714 108.14 216.023 109.773C214.628 113.163 213.293 116.561 211.979 119.955C206.75 133.55 202.244 147.485 198.482 161.698C194.71 175.809 191.843 190.227 189.899 204.856C188.453 215.602 187.884 226.513 188.199 237.468C188.408 248.129 190.173 258.782 193.43 269.042C194.267 271.482 195.245 273.872 196.357 276.198C196.944 277.329 197.434 278.478 198.134 279.595L199.115 281.281L199.359 281.703L199.578 282.025L200.004 282.664L200.421 283.309L200.928 283.909C201.28 284.306 201.573 284.723 201.959 285.117C202.749 285.939 203.579 286.716 204.446 287.443C206.291 288.996 208.244 290.391 210.286 291.613C214.526 294.116 219.012 296.058 223.642 297.394C225.859 298.012 228.111 298.44 230.373 298.673C231.415 298.779 232.458 298.822 233.497 298.801L234.887 298.663C235.007 298.652 235.108 298.652 235.247 298.631L235.708 298.541L236.633 298.372C245.352 297.09 253.786 294.468 261.678 290.587C269.37 286.628 276.222 280.898 283.186 274.531C290.122 268.19 297.37 261.632 305.084 255.827L307.973 253.639L310.837 251.553L316.612 247.396C320.487 244.639 324.429 241.933 328.47 239.34C336.575 233.974 345.216 229.535 354.259 226.092C363.495 222.528 373.356 220.834 383.358 221.094C393.578 221.192 403.756 224.02 412.967 229.321C417.602 232.089 421.856 235.573 425.582 239.653C427.471 241.718 429.2 243.942 430.75 246.301C432.28 248.694 433.613 251.218 434.733 253.841C436.43 257.9 437.704 262.125 438.531 266.437C439.373 270.594 439.885 274.641 440.325 278.575C441.18 286.444 441.901 293.893 443.176 301.126C445.69 315.099 450.109 328.712 456.287 341.521C457.344 343.659 458.195 345.897 458.826 348.198C459.163 349.784 458.996 350.717 458.353 350.924C457.71 351.131 456.605 350.599 455.077 349.254C452.965 347.278 451.085 345.033 449.484 342.574C446.431 337.993 443.653 333.219 441.166 328.283C438.645 323.183 436.49 317.902 434.722 312.488C432.958 307.042 431.542 301.493 430.485 295.88C429.408 290.323 428.67 284.829 427.924 279.603C427.613 277.447 427.324 275.339 426.972 273.288C426.697 271.218 426.321 269.234 425.937 267.292C425.236 263.623 424.099 260.041 422.554 256.634C421.012 253.334 418.998 250.289 416.589 247.617C414.096 244.824 411.281 242.381 408.221 240.353L408.011 240.483Z"
+              fill="#E9C46A" stroke="#E9C46A" stroke-width="8" />
+          </svg>
+        </div>
+        <img src=".//images/hero-section.png" class="object-contain w-full h-full relative z-10" alt="Student happy" />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="bg-cardSection pt-20 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <aside class="left-bg"></aside>
+      <div class="flex flex-col items-center text-center gap-5 max-w-xl mx-auto sticky -top-9 pb-16 pt-16">
+        <h3 class="md:text-5xl text-2xl font-semibold text-white">Experience the Difference</h3>
+        <p class="text-sm text-white font-medium">Embark on a transformative learning journey where our exceptional
+          tutors nurture
+          your child’s potential, fostering both academic excellence and personal growth</p>
+      </div>
+      <aside class="right-bg"></aside>
+      <div class="max-w-5xl mx-auto relative">
+        <div class="cards w-100 max-w-5xl grid">
+          <div class="card sticky top-24  rounded-3xl" data-index="0">
+            <div
+              class="card__inner will-change-transform flex overflow-hidden  text-white text-left px-14 py-20 w-full items-center justify-between">
+              <div class="card__content w-3/5">
+                <h2 class="text-2xl md:text-5xl font-semibold mb-6">
+                  Guaranteed grade improvement
+                </h2>
+                <p class="text-md md:text-base mb-8">
+                  Every student is a genius in their own way. FYT enhances students’ learning experience by providing
+                  each
+                  student with undivided attention and tailored support that suits their learning style. Our tutors are
+                  so
+                  confident in this approach that we guarantee a 2+ grade level improvement in a student’s academic
+                  journey.
+                </p>
+                <a href="#" class="custom-button">
+                  Sign up
+                </a>
+
+              </div>
+              <div class="card__image-container">
+                <lottie-player src="https://cdn.lottielab.com/l/DhyVHcu643BjAK.json"style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+              </div>
+
+            </div>
+          </div>
+          <div class="card sticky top-28  rounded-3xl" data-index="0">
+            <div
+              class="card__inner will-change-transform flex overflow-hidden  text-white text-left px-14 py-20 w-full items-center justify-between">
+              <div class="card__content w-3/5">
+                <h2 class="text-2xl md:text-5xl font-semibold mb-6">
+                  Vetted subject experts
+                </h2>
+                <p class="text-md md:text-base mb-8">
+                  Great tutors positively influence students’ lives for the better. Our tutors undergo a rigorous selection process, with only one out of nine making it to the platform. Our expert team conducts in-house training programs for fresh tutors, preparing them professionally before they offer tutoring sessions on the platform.
+                </p>
+                <a href="#" class="custom-button">
+                  Sign up
+                </a>
+
+              </div>
+              <div class="card__image-container">
+                <lottie-player src="https://cdn.lottielab.com/l/74WQz9cnyUd3Nq.json"style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+              </div>
+
+            </div>
+          </div>
+          <div class="card sticky top-[127px]  rounded-3xl" data-index="0">
+            <div
+              class="card__inner will-change-transform flex overflow-hidden  text-white text-left px-14 py-20 w-full items-center justify-between">
+              <div class="card__content w-3/5">
+                <h2 class="text-2xl md:text-5xl font-semibold mb-6">
+                  Safe and secure learning environment
+                </h2>
+                <p class="text-md md:text-base mb-8">
+                  FYT is committed to enhancing students’ learning experience by mimicking the classroom environment while prioritizing your digital safety. We have a robust system in place to safeguard your digital identity and online data. We strictly adhere to industry-leading compliance standards to ensure your privacy is our top priority. Your trust means everything to us!
+                </p>
+                <a href="#" class="custom-button">
+                  Sign up
+                </a>
+
+              </div>
+              <div class="card__image-container">
+                <lottie-player src="https://cdn.lottielab.com/l/7gi1QJU5sdn8hK.json"style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+              </div>
+
+            </div>
+          </div>
+          <div class="card sticky top-0  rounded-3xl" data-index="0">
+            <div
+              class="card__inner will-change-transform flex overflow-hidden  text-white text-left px-14 py-20 w-full justify-between items-center">
+              <div class="card__content w-3/5">
+                <h2 class="text-2xl md:text-5xl font-semibold mb-6">
+                  Affordable pricing plans
+                </h2>
+                <p class="text-md md:text-base mb-8">
+                  FYT is dedicated to making education accessible to all. In support of families with diverse financial backgrounds, we offer starting prices as low as £12. Despite our affordable rates, we never compromise on quality and ensure that students receive what is promised
+                </p>
+                <a href="#" class="custom-button">
+                  Sign up
+                </a>
+
+              </div>
+              <div class="card__image-container">
+                <lottie-player src="https://cdn.lottielab.com/l/2hVdXUXRFpfxdH.json" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Booking section -->
+  <section class="bg-light-bg py-16 px-4 md:px-20 text-center">
+    <div class="max-w-6xl container mx-auto">
+      <h2 class="text-4xl lg:text-[54px] font-medium text-primary mb-12">
+        Complete your first free lesson with FYT now
+      </h2>
+
+      <div class="flex flex-col md:flex-row items-center justify-around gap-4 mb-8">
+
+        <div class="bg-white rounded-xl shadow-sm flex flex-col justify-between md-w-[330px] w-full items-center py-8">
+          <p class="text-green-600 font-semibold mb-2 text-sea-green">Step 1</p>
+          <h3 class="text-primary med-para text-center font-medium">PICK THE PERFECT <br> TUTOR</h3>
+          <lottie-player src="https://cdn.lottielab.com/l/DNr9WhqKJYssus.json" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
+
+
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm flex flex-col justify-between md-w-[330px] w-full items-center py-8">
+          <p class="text-green-600 font-semibold mb-2 text-sea-green">Step 2</p>
+          <h3 class="text-primary med-para text-center font-medium">BOOK A FREE <br> SESSION</h3>
+          <lottie-player src="https://cdn.lottielab.com/l/3exY6QBF9jEgtm.json" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm flex flex-col justify-between md-w-[330px] w-full items-center py-8">
+          <p class="text-green-600 font-semibold mb-2 text-sea-green">Step 3</p>
+          <h3 class="text-primary med-para text-center font-medium">ACCESS STUDY <br> RESOURCES</h3>
+          <lottie-player src="https://cdn.lottielab.com/l/DgbBLZXLJyuzu9.json" style="width: 250px; height: 250px;" loop autoplay></lottie-player>
+        </div>
+      </div>
+
+      <a href="#" class="custom-button">
+        Sign up now
+      </a>
+
+    </div>
+  </section>
+
+  <!-- University Section -->
+  <section class="bg-white py-10">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-xl md:text-2xl font-semibold text-text mb-10">
+        Tutors from top universities
+      </h2>
+
+      <div class="flex flex-wrap justify-center items-center gap-10">
+        <!-- University Logos -->
+        <img src=".//images/lums.png" alt="LUMS" class="object-contain grayscale" width="136px" height="91px" />
+        <img src=".//images/agha-uni.png" alt="Aga Khan University" class=" object-contain grayscale" width="136px"
+          height="91px" />
+        <img src=".//images/king.png" alt="King's College London" class="object-contain grayscale" width="136px"
+          height="91px" />
+        <img src=".//images/oxford.png" alt="Oxford" class="object-contain grayscale" width="136px" height="91px" />
+        <img src=".//images/cambrige.png" alt="Cambridge" class="object-contain grayscale" width="136px"
+          height="91px" />
+      </div>
+    </div>
+  </section>
+
+  <!-- What they say Section -->
+  <section class="bg-light-bg py-24 px-4 text-center">
+
+    <h2 class="text-2xl md:text-5xl font-bold text-primary mb-5">
+      What they say about
+    </h2>
+    <img src="/images/logo.png" alt="" class="mx-auto w-16 md:w-24 mb-24">
+
+    <!-- Slider -->
+    <div class="owl-carousel first-slider">
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938016/pexels-photo-4_tfmpvk.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938017/pexels-photo-3_ppz2bb.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938016/pexels-photo-2_hstxhf.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938123/pexels-photo-5_x69tiz.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487937862/pexels-photo-91227_lpsizl.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938016/pexels-photo-4_tfmpvk.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938017/pexels-photo-3_ppz2bb.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938016/pexels-photo-2_hstxhf.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487938123/pexels-photo-5_x69tiz.jpg"
+          alt="image" />
+      </div>
+      <div class="item">
+        <img src="https://res.cloudinary.com/milairagny/image/upload/v1487937862/pexels-photo-91227_lpsizl.jpg"
+          alt="image" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="bg-lightbrown py-20">
+    <h3 class="md:text-5xl text-center mb-10 text-2xl font-semibold text-primary">Discover the buzz around FYT through
+      reviews</h3>
+    <div class="overflow-hidden w-100">
+      <div class="flex w-max sliding-left items-center">
+        <div class="slider-item">
+          <div class="bg-sienna rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/clients.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-[#7A7A7A] text-sm mt-1 text-center">~Ayesha R</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-black"><i class="ri-double-quotes-l"></i>
+                  Personalized Learning</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  I’m so impressed with the level of communication and support Find Your Tutor provides. I’m always kept
+                  up-to-date on my son’s progress, and I feel like I have a genuine partnership with his tutor. This
+                  level
+                  of transparency and collaboration is invaluable to me.
+                </p>
+                <p class="mt-3 font-bold text-accent text-sm">12 lessons with Ayesha</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-sienna rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/clients.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-[#7A7A7A] text-sm mt-1 text-center">~Ayesha R</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-black"><i class="ri-double-quotes-l"></i>
+                  Personalized Learning</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  I’m so impressed with the level of communication and support Find Your Tutor provides. I’m always kept
+                  up-to-date on my son’s progress, and I feel like I have a genuine partnership with his tutor. This
+                  level
+                  of transparency and collaboration is invaluable to me.
+                </p>
+                <p class="mt-3 font-bold text-accent text-sm">12 lessons with Ayesha</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="flex w-max sliding-right items-center">
+        <div class="slider-item">
+          <div class="bg-sienna rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/clients.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-[#7A7A7A] text-sm mt-1 text-center">~Ayesha R</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-black"><i class="ri-double-quotes-l"></i>
+                  Personalized Learning</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  I’m so impressed with the level of communication and support Find Your Tutor provides. I’m always kept
+                  up-to-date on my son’s progress, and I feel like I have a genuine partnership with his tutor. This
+                  level
+                  of transparency and collaboration is invaluable to me.
+                </p>
+                <p class="mt-3 font-bold text-accent text-sm">12 lessons with Ayesha</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-sienna rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/clients.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-[#7A7A7A] text-sm mt-1 text-center">~Ayesha R</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-black"><i class="ri-double-quotes-l"></i>
+                  Personalized Learning</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  I’m so impressed with the level of communication and support Find Your Tutor provides. I’m always kept
+                  up-to-date on my son’s progress, and I feel like I have a genuine partnership with his tutor. This
+                  level
+                  of transparency and collaboration is invaluable to me.
+                </p>
+                <p class="mt-3 font-bold text-accent text-sm">12 lessons with Ayesha</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-light-bg rounded-xl shadow p-6 max-w-xl mx-auto my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client4.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Anna S</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-green"><i class="ri-double-quotes-l text-sea-green"></i>
+                  Fostering Confidence and Success</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  Find Your Tutor’s personalized approach to learning has made a world of difference for my son. His
+                  tutor has taken the time to understand his individual needs and learning style, and she tailors her
+                  lessons accordingly. As a result, my son is finally motivated to learn, and his grades have improved
+                  significantly.
+                </p>
+                <p class="mt-3 font-bold text-green text-sm">29 lessons with Haper</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="slider-item">
+          <div class="bg-lightblue rounded-xl shadow p-6 max-w-xl my-4 border-8 border-white">
+            <div class="flex md:flex-row flex-col md:items-start items-center gap-4">
+              <div>
+                <div class="w-36 h-36 overflow-hidden rounded-full">
+                  <img src="/images/client2.jpg" alt="Reviewer Image" class="w-full h-full object-cover" />
+                </div>
+                <p class="text-text text-sm mt-1 text-center">~Jessica L</p>
+              </div>
+
+              <div class="flex flex-col items-start">
+                <h3 class="text-lg font-bold text-primary"><i class="ri-double-quotes-l"></i>
+                  Easing the Burden</h3>
+                <p class="text-[#7A7A7A] mt-2 text-sm font-medium">
+                  As a working parent, I often struggle to find the time and resources to support my children’s
+                  education effectively. Find Your Tutor has been a lifesaver! Their flexible scheduling and
+                  personalized approach to learning have made a significant difference in my children’s academic
+                  performance and overall well-being
+                </p>
+                <p class="mt-3 font-bold text-primary text-sm">22 lessons with Muhammad</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="md:text-5xl text-2xl font-bold text-primary mb-16">Popular Subjects</h2>
+
+      <div class="flex flex-wrap justify-center gap-6">
+
+        <a href="#" class=" subject-b border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text">
+            <i class="ri-bar-chart-line text-4xl mb-2 -rotate-12"></i>
+            <span class="font-bold text-xl group-hover:text-primary">Accounting</span>
+          </div>
+        </a>
+
+
+        <a href="#" class=" subject-o border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-dna-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl text-xl">Biology</span>
+          </div>
+        </a>
+
+        <a href="#" class=" subject-g border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-reactjs-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">Chemistry</span>
+          </div>
+        </a>
+
+        <a href="#" class="subject-b border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-computer-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">Computer Science</span>
+          </div>
+        </a>
+
+        <a href="#" class="subject-o border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-book-open-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">English Literature</span>
+          </div>
+        </a>
+
+        <a href="#" class="subject-g border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-translate-2 text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">French</span>
+          </div>
+        </a>
+
+        <a href="#" class=" subject-b border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-news-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">German</span>
+          </div>
+        </a>
+
+        <a href="#" class=" subject-o border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-book-2-fill text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">History</span>
+          </div>
+        </a>
+
+        <a href="#" class="subject-g border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-calculator-line text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">Mathematics</span>
+          </div>
+        </a>
+
+        <a href="#" class=" subject-b border-2 border-gray-500 rounded-lg">
+          <div class="w-60 h-28 rounded-lg flex flex-col justify-center items-center text-text ">
+
+            <i class="ri-pinyin-input text-4xl mb-2  -rotate-12"></i>
+            <span class="font-bold  text-xl">Spanish</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign up Section -->
+  <section class="max-w-6xl mx-auto flex justify-center items-center min-h-[50vh] bg-white px-4 py-12">
+    <div class="bg-primary rounded-3xl text-white text-center px-6 py-12 w-full">
+      <h2 class="text-xl md:text-3xl font-bold mb-4">
+        Let FYT shape your academic journey to excellence through <br />
+        the power of online tutoring
+      </h2>
+      <p class="text-md md:text-base mb-6">
+        Sign up now and book your first trial lesson today!
+      </p>
+      <button class="bg-accent text-primary font-semibold px-6 py-2 rounded-md">
+        Sign up
+      </button>
+    </div>
+  </section>
+
+
+
+
+
+   <!-- Lottie Script -->
+   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
