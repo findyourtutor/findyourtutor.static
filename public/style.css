@@ -79,6 +79,10 @@
     background-color: var(--color-sandy-brown);
 }
 
+.bg-saffron-tint-70{
+    background-color: var(--color-saffron-tint-70);
+}
+
 /* Text colors */
 .text-green {
     color: var(--color-green);
