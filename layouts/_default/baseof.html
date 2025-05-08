@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ .Title }}</title>
+  <link rel="stylesheet" href="{{ "css/main.css" | resources.Get | postCSS | minify | fingerprint | css.Sass }}" />
+  
+  {{ block "head" . }}{{ end }}
+
+</head>
+<body class="bg-gray-100 text-gray-900">
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
